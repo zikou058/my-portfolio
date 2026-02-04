@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Showcase | DevPortfolio</title>
+<script src="script.js" defer type="module"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25d1f4",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(37, 209, 244, 0.3);
+            border-color: #25d1f4;
+            transform: translateY(-4px) scale(1.02);
+        }
+        .ambient-light-1 {
+            background: radial-gradient(circle at 0% 0%, rgba(37, 209, 244, 0.08) 0%, transparent 50%);
+        }
+        .ambient-light-2 {
+            background: radial-gradient(circle at 100% 100%, rgba(37, 209, 244, 0.08) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+<div class="relative min-h-screen overflow-hidden">
+<!-- Ambient Light Leaks -->
+<div class="absolute inset-0 ambient-light-1 pointer-events-none"></div>
+<div class="absolute inset-0 ambient-light-2 pointer-events-none"></div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<!-- Top Navigation Bar -->
+<header class="relative z-50 flex items-center justify-between px-6 py-6 lg:px-20">
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-primary rounded-lg shadow-[0_0_20px_rgba(37,209,244,0.4)]">
+<span class="material-symbols-outlined text-background-dark font-bold">terminal</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase">Dev</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-sm font-medium text-primary hover:text-primary transition-colors" href="project.html">Project</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-black hidden sm:flex items-center justify-center rounded-lg h-10 px-6 bg-primary border border-white/10 hover:bg-primary/10 hover:text-white transition-all text-sm font-bold">
+                    Hire Me
+                </button>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center py-12 lg:py-20">
+<div class="w-full max-w-[1200px] px-6 lg:px-10">
+<!-- Section Header -->
+<div class="flex flex-col gap-2 mb-4">
+<span class="text-primary font-mono text-sm tracking-widest uppercase">Portfolio</span>
+<h1 class="text-slate-900 dark:text-white text-4xl lg:text-6xl font-bold tracking-tight">ALL <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">PROJECTS</span></h1>
+</div>
+<div class="mb-10 flex border-b border-slate-200 dark:border-[#315f68] gap-8 overflow-x-auto no-scrollbar"></div>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+<!-- Card 1 -->
+<div class="group relative flex flex-col rounded-xl overflow-hidden glass-card neon-glow transition-all duration-500 cursor-pointer">
+<div class="aspect-[16/10] w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-top transition-transform duration-700 group-hover:scale-11" data-alt="Futuristic dark dashboard with cyan neon graphs" style="background-image: url('src/Screenshot\ 2026-02-04\ at\ 10-30-50\ Rose\ Valley\ Hotel\ Homepage.png');">
+</div>
+</div>
+<!-- Glassmorphism Overlay Content -->
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent">
+<div class="glass-card p-6 rounded-lg border border-white/10 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-start mb-2">
+<h3  class="text-2xl font-bold text-white">Rose Valley Hotel</h3>
+<div id="b1" class="flex gap-2">
+<span  class="material-symbols-outlined text-primary text-xl">open_in_new</span>
+</div>
+</div>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">A modern, fully responsive landing page for a boutique hotel in Ouarzazate, Morocco. This project features a clean, user-centric interface designed to streamline the booking process</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">JavaScript</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">tailwindcss</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">HTML</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col rounded-xl overflow-hidden glass-card neon-glow transition-all duration-500 cursor-pointer">
+<div class="aspect-[16/10] w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-top transition-transform duration-700 group-hover:scale-110" data-alt="High tech minimal code editor interface" style="background-image: url('src/Screenshot\ 2026-02-04\ at\ 10-48-58\ tailwind\ cli.png');">
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent">
+<div class="glass-card p-6 rounded-lg border border-white/10 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-start mb-2">
+<h3  class="text-2xl font-bold text-white">Tailwind-Powered Adventure Portal</h3>
+<div id="b2" class="flex gap-2">
+<span  class="material-symbols-outlined text-primary text-xl">open_in_new</span>
+</div>
+</div>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">Designed to evoke a sense of wanderlust, this landing page uses parallax-style imagery and bold contrast to guide users through an agency's story.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">tailwindcss</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">HTML</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">JavaScript</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col rounded-xl overflow-hidden glass-card neon-glow transition-all duration-500 cursor-pointer">
+<div class="aspect-[16/10] w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-top transition-transform duration-700 group-hover:scale-110" data-alt="Abstract 3D floating digital islands" style="background-image: url('src/Screenshot\ 2026-02-04\ at\ 10-36-51\ Gestion\ etudiants.png');">
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent">
+<div class="glass-card p-6 rounded-lg border border-white/10 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-bold text-white">Student Management System</h3>
+<div id="b3" class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-xl">open_in_new</span>
+</div>
+</div>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">A functional web application designed to streamline student data management</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">tailwindcss</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">JavaScript</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">json server</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col rounded-xl overflow-hidden glass-card neon-glow transition-all duration-500 cursor-pointer">
+<div class="aspect-[16/10] w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-button transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist geometric architectural rendering" style="background-image: url('src/Screenshot\ 2026-02-04\ at\ 10-43-52\ Alvin\'s\ Pizzeria.png');">
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent">
+<div class="glass-card p-6 rounded-lg border border-white/10 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-bold text-white">E-Commerce Food Interface</h3>
+<div id="b4" class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-xl">open_in_new</span>
+</div>
+</div>
+<p class="text-slate-300 text-sm mb-4 line-clamp-2">"Pizza Favorites" section showcasing top-selling products like Pepperoni, Supreme, and Cheese pizzas with clear pricing.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">JavaScript</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">HTML</span>
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">CSS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / View All -->
+<!-- <div class="mt-16 flex flex-col items-center">
+<button class="group flex items-center gap-3 glass-card px-8 py-4 rounded-full border border-white/10 hover:border-primary transition-all duration-300">
+<span class="text-sm font-bold tracking-widest uppercase text-white group-hover:text-primary transition-colors">Experience More Works</span>
+<span class="material-symbols-outlined text-primary transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<div class="mt-8 flex gap-3">
+<span class="w-12 h-1 bg-primary rounded-full"></span>
+</div>
+</div> -->
+<footer class="w-full border-t mt-16 border-primary/10 py-6 px-10 flex flex-col md:flex-row justify-between items-center glass-morphism gap-4">
+<div class="flex items-center gap-2">
+<div class="size-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
+<span class="text-xs text-slate-400 font-mono">SYSTEMS NOMINAL // AVAILABLE FOR PROJECTS</span>
+</div>
+<div class="flex gap-6 text-slate-500 text-xs font-mono uppercase tracking-widest">
+<a class="hover:text-primary" href="https://www.instagram.com/0xxclauy/">Instagram</a>
+<a class="hover:text-primary" href="https://github.com/zikou058">Github</a>
+<a class="hover:text-primary" href="https://www.linkedin.com/in/mennis-zakaria-0xxclauy">LinkedIn</a>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</div>
+</body></html>
